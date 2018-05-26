@@ -1,11 +1,8 @@
-FROM alpine:3.4
+FROM alpine:3.7
 
-MAINTAINER Sergii Nuzhdin <ipaq.lw@gmail.com>
-
-ENV KUBE_LATEST_VERSION=v1.9.3
-ENV HELM_VERSION=v2.8.1
+ENV KUBE_LATEST_VERSION=v1.10.3
+ENV HELM_VERSION=v2.9.1
 ENV HELM_FILENAME=helm-${HELM_VERSION}-linux-amd64.tar.gz
-
 
 RUN apk add --update ca-certificates \
  && apk add --update -t deps curl  \
